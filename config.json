@@ -160,7 +160,7 @@
     "redis": {
         "host": "127.0.0.1",
         "port": 6379,
-        "auth": "6e2e70736b",
+        "auth": null,
         "db": 16,
 	"cleanupInterval": 15
     },
