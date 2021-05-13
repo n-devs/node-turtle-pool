@@ -4,7 +4,7 @@ var redis = require('redis')
 
 require('./lib/configReader.js')
 require('./lib/logger.js')
-global.redisClient = redis.createClient(global.config.redis.port, global.config.redis.host)
+global.redisClient = redis.createClient({host:global.config.redis.port,port:global.config.redis.host,auth_pass:global.config.redis.auth} )
 
 if (cluster.isWorker) {
   switch (process.env.workerType) {
